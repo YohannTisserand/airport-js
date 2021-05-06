@@ -36,7 +36,6 @@ describe('Instructions', () => {
     });
     it('blocks landing when weather is stormy', () => {
       spyOn(Math,'random').and.returnValue(1);
-      // spyOn(airport._weather,'isStormy').and.returnValue(true);
       expect(function(){ plane.land(airport); }).toThrowError('cannot land during storm');
       expect(airport.planes()).toEqual([]);
     });
